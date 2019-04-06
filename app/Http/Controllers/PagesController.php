@@ -18,8 +18,5 @@ class PagesController extends Controller
         
         return view ('pages.services')  ;
     }
-    public function  buy(){
-        
-        return view('pages.buy')  ;
-    }
+    
 }

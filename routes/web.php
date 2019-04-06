@@ -16,6 +16,7 @@ Route::get('/services', 'PagesController@services');
 Route::get('/buy', 'PagesController@buy');
 
 Route::resource('posts','PostsController');
+Route::resource('buy1','BuyController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

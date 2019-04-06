@@ -15,18 +15,25 @@
                 </ul>
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="/about">about</a>
+                    <a class="nav-link" href="/about">ABOUT</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link " href="/services">services</a>
+                    <a class="nav-link " href="/services">SERVICES</a>
                   </li>
                   <li class="nav-item active">
-                          <a class="nav-link " href="/posts">buy</a>
+                          <a class="nav-link " href="/posts">POSTS</a>
                         </li>
-                        
+                        <li class="nav-item active">
+                            <a class="nav-link " href="/buy1">BUY</a>
+                          </li>
+                          
+                          <li class="nav-item active">
+                            <a class="nav-link " href="/home">DASHBOARD</a>
+                          </li>
+                          
                            </ul>
                 
                 <!-- Right Side Of Navbar -->

@@ -61,6 +61,7 @@ class PostsController extends Controller
         $post->body=$request->input('body');
         $post->user_id=auth()->user()->id;
         $post->cover_image=$fileNameToStore;
+        $post->post_name=$request->input('CATAGORY');
         $post->save();
       }
 
@@ -85,7 +86,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post =Post::find($id);
+        return view('posts.edit')->with('post',$post) ;
+
     }
 
     /**
@@ -97,7 +100,31 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+            $this->validate($request,
+            ['title'=>'required',
+            'body'=>'required',
+            'cover_image=>image|nullable|max:1999'
+    
+            ]);
+            if($request->hasFile('cover_image')){
+                $filenameWithExt =$request->file('cover_image')->getClientOriginalName();
+                $filename=pathinfo($filenameWithExt,PATHINFO_FILENAME);
+                $extention=$request->file('cover_image')->getClientOriginalExtension();
+                $fileNameToStore=$filename.'_'.time().'.'.$extention;
+                $path=$request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+            }
+            else{
+                $fileNameToStore='noimage.jpg';
+            }
+            $post= Post::find($id);
+            $post->title=$request->input('title');
+            $post->body=$request->input('body');
+            $post->user_id=auth()->user()->id;
+            $post->cover_image=$fileNameToStore;
+            $post->post_name=$request->input('CATAGORY');
+            $post->save();
+            return redirect('/home')->with('success','updated');
     }
 
     /**
