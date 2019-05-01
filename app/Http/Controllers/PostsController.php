@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use App\Post;
-
+use App\Order;
 class PostsController extends Controller
 {
     /**
@@ -46,6 +47,7 @@ class PostsController extends Controller
         'cover_image=>image|nullable|max:1999'
 
         ]);
+       
         if($request->hasFile('cover_image')){
             $filenameWithExt =$request->file('cover_image')->getClientOriginalName();
             $filename=pathinfo($filenameWithExt,PATHINFO_FILENAME);
@@ -56,13 +58,19 @@ class PostsController extends Controller
         else{
             $fileNameToStore='noimage.jpg';
         }
+        
         $post=new Post;
         $post->title=$request->input('title');
         $post->body=$request->input('body');
         $post->user_id=auth()->user()->id;
         $post->cover_image=$fileNameToStore;
         $post->post_name=$request->input('CATAGORY');
+        
         $post->save();
+        $order=new Order;
+        $order->id=$request->input('id');;
+       $order->event=$request->input('event');;
+        $order->save();
       }
 
     /**
