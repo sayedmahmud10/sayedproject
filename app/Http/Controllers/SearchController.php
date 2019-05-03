@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Order;
+use App\User;
 use App\Post;
-
-class OrderController extends Controller
+use App\Order;
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -34,15 +34,14 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    
     public function store(Request $request)
     {
-        $post= Post::find($idt);
-
-        $order=new Order;
-        $order->id=$post;
-       $order->event=$request->input('event');;
-        $order->save();
+        $q = $request->input ( 'title' );
+    $user = Post::where('id','LIKE','%'.$q.'%')->orWhere('title','LIKE','%'.$q.'%')->get();
+    if(count($user) > 0)
+        return view('Buy.update')->withDetails($user)->withQuery ( $q );
+    else return view ('Buy.update')->withMessage('No Details found. Try to search again !');
+    
     }
 
     /**
@@ -53,12 +52,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-    
-        $order = Order::where('id', $id)->select('id','event')->get();
-
-       
-        return view('orders.show')->with('order',$order) ;
-
+        //
     }
 
     /**
@@ -81,11 +75,7 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $order=new Order;
-        $order->id=$id;
-       $order->event=$request->input('event');;
-        $order->save();
+        //
     }
 
     /**

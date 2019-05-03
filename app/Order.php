@@ -8,6 +8,7 @@ class Order extends Model
 {
     public $table ='orders';
     
+
     public $timestamps = false;
     
 

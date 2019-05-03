@@ -27,11 +27,14 @@
                           <a class="nav-link " href="/posts">POSTS</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link " href="/buy1">BUY</a>
+                            <a class="nav-link " href="/buy1">SERVICES</a>
                           </li>
                           
                           <li class="nav-item active">
                             <a class="nav-link " href="/home">DASHBOARD</a>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link " href="/posts/create">CREATE A PROFILE</a>
                           </li>
                           
                            </ul>

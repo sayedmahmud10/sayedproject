@@ -13,11 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/buy">Home <span class="sr-only">(current)</span></a>
-                      </li>
-
-                    <a href="/posts/create" class="btn btn-primary"> SELL </a>
+                    
                     
                                         <h3> Your  Posts</h3>
                     @if(count($posts)>0)
@@ -31,8 +27,15 @@
 
                         <tr>
                             <th>{{$post->title}}</th>
+                            
                             <th><a href="/posts/{{$post->id}}/edit"class="btn btn-default">Edit</a></th>
-                            <th> </th>
+                            <th><a href="/orders/{{$post->id}}"class="btn btn-default">ORDERS</a></th>
+                            <th>
+                            {!!Form::open(['action'=>['PostsController@destroy',$post->id],'method'=>'POST','class'=>'pull-right'])!!}
+                            {{Form::hidden('_method','DELETE')}} 
+                            {{Form::submit('DELETE',['class'=>'btn btn-danger'])}}
+                            {!!Form::close()!!}
+                             </th>
                         </tr>
                         @endforeach 
                     </table>

@@ -17,7 +17,7 @@
 
         CATAGORY
       
-    </br>
+    <br>
         <select name="CATAGORY" id="">
             <option value="venue host">venue host  </option>
             <option value="photographer">  photographer </option>
