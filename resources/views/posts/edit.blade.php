@@ -10,6 +10,11 @@
         {{ Form::text('title',$post->title,['class'=>'form-control','placeholder'=>'Title'])}} 
     </div>
     <div class="form-group">
+        {{ Form::label('location','Location')}}
+    {{ Form::text('location',$post->title,['class'=>'form-control','placeholder'=>'Location'])}} 
+</div>
+
+    <div class="form-group">
             {{ Form::label('body','Body')}}
         {{ Form::textarea('body',$post->body,['class'=>'form-control','placeholder'=>'description'])}} 
     </div>

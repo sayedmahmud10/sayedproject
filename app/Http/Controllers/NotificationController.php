@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Post;
-use App\Order;
-class SearchController extends Controller
+
+class NotificationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,9 @@ class SearchController extends Controller
      */
     public function index()
     {
+        $user = new User();
+        $user->email = 'nszimsm@gmail.com';  
+        $user->notify(new TemplateEmail());
         
     }
 
@@ -36,12 +39,7 @@ class SearchController extends Controller
      */
     public function store(Request $request)
     {
-        $q = $request->input ( 'location' );
-    $user = Post::where('id','LIKE','%'.$q.'%')->orWhere('location','LIKE','%'.$q.'%')->get();
-    if(count($user) > 0)
-        return view('Buy.update')->withDetails($user)->withQuery ( $q );
-    else return view ('Buy.update')->withMessage('No Details found. Try to search again !');
-    
+        //
     }
 
     /**

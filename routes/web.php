@@ -19,9 +19,11 @@ Route::resource('orders','OrderController');
 
 Route::resource('posts','PostsController');
 Route::resource('buy1','BuyController');
+Route::resource('notifications','NotificationController');
 Auth::routes();
+Route::group(['middleware'=>['preventbackbutton','auth']],function(){
 Route::get('/home', 'HomeController@index')->name('home');
-
+});
 
 Route::resource('search','SearchController'); 
    

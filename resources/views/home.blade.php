@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<body style="background:url('/storage/cover_images/2.jpg'); background-size: cover;">
 
 @section('content')
 <div class="container">

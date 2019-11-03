@@ -2,31 +2,9 @@
 {!! Form::open(['action' => 'SearchController@store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
 <div class="form-group">
       
-    {{ Form::text('title','',['class'=>'form-control','placeholder'=>'Location'])}} 
+    {{ Form::text('location','',['class'=>'form-control','placeholder'=>'Location'])}} 
 </div>
 {!!Form::close()!!}
-<div class="container">
-  @if(isset($details))
-      <p> The Search results for your query <b> {{ $query }} </b> are :</p>
-  <h2>Sample User details</h2>
-  <table class="table table-striped">
-      <thead>
-          <tr>
-              <th>title</th>
-              <th>id</th>
-          </tr>
-      </thead>
-      <tbody>
-          @foreach($details as $user)
-          <tr>
-              <td>{{$user->title}}</td>
-              <td>{{$user->id}}</td>
-          </tr>
-          @endforeach
-      </tbody>
-  </table>
-  @endif
-</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>

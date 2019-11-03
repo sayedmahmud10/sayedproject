@@ -31,7 +31,7 @@
     <div class="card bg-primary">
 
           <div class="card" style="width:400px">
-            <img class="card-img-top" src="/storage/cover_images/al_1554795363.jpg" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="/storage/cover_images/kctg_1554569752.jpg" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">photographer</h4>
               <a href="/buy1/photographer" class="btn btn-primary">Check Out</a>
@@ -45,7 +45,7 @@
         <div class="card bg-primary">
 
               <div class="card" style="width:400px">
-                <img class="card-img-top" src="/storage/cover_images/al_1554795363.jpg" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="/storage/cover_images/1.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
                   <h4 class="card-title">decoration</h4>
                   <a href="/buy1/decoration" class="btn btn-primary">Check Out</a>
@@ -55,7 +55,7 @@
             <div class="card bg-primary">
 
                   <div class="card" style="width:400px">
-                    <img class="card-img-top" src="/storage/cover_images/al_1554795363.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/storage/cover_images/5.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                       <h4 class="card-title">perfomer</h4>
                       <a href="/buy1/perfomer" class="btn btn-primary">Check Out</a>
@@ -63,7 +63,7 @@
                   </div>
                 </div>
                       <div class="card" style="width:400px">
-                        <img class="card-img-top" src="/storage/cover_images/al_1554795363.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/storage/cover_images/4.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                           <h4 class="card-title">food service</h4>
                           <a href="/buy1/food service" class="btn btn-primary">Check Out</a>

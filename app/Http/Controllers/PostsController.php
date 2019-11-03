@@ -72,6 +72,7 @@ class PostsController extends Controller
         
         $post=new Post;
         $post->title=$request->input('title');
+        $post->location=$request->input('location');
         $post->body=$request->input('body');
         $post->user_id=auth()->user()->id;
         $post->cover_image=$fileNameToStore;
@@ -138,6 +139,8 @@ class PostsController extends Controller
             }
             $post= Post::find($id);
             $post->title=$request->input('title');
+            $post->location=$request->input('location');
+
             $post->body=$request->input('body');
             $post->user_id=auth()->user()->id;
             $post->cover_image=$fileNameToStore;

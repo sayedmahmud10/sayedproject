@@ -11,10 +11,7 @@ class PagesController extends Controller
         return view ('pages.index')->with('title',$title)  ;
     }
     public function  about(){
-        $user = new User();
-$user->email = 'nszimsm@gmail.com';  
-$user->notify(new TemplateEmail());
-
+       
 
         $title='about us';
         return view ('pages.about')->with('title',$title)  ;

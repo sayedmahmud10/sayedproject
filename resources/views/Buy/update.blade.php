@@ -33,6 +33,8 @@
           <img class="card-img-top" src="/storage/cover_images/{{$user->cover_image}}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">{{$user->title}}</h4>
+            <h4 class="card-title">{{$user->location}}</h4>
+
             <p class="card-text">POSTED ON:{{$user->created_at}}</p>
             <a href="/posts/{{$user->id}}" class="btn btn-primary">Check Out</a>
           </div>

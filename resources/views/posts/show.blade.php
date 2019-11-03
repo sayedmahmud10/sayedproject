@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+App\user;
 @section('content')
    <h1> Posts1</h1>
    <img style ="width:30%" src="/storage/cover_images/{{$post->cover_image}}">
@@ -30,9 +30,12 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <div>
-   <h3><a href="/about">ORDER</a></h3>
-   <div class="w3-container">
-   <a href="/about" class="w3-btn w3-black">ORDER</a>
+     <div class="w3-container">
+   <a href="/notifications" class="w3-btn w3-black">ORDER</a>
 </div>
+<div class="w3-container">
+  <a href="/notifications/{{$post->id}}" class="w3-btn w3-black">FIND  ADDRESS</a>
+</div>
+
 </div> 
 @endsection

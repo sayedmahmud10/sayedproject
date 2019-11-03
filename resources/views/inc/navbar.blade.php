@@ -20,12 +20,6 @@
                   <li class="nav-item active">
                     <a class="nav-link" href="/about">ABOUT</a>
                   </li>
-                  <li class="nav-item active">
-                    <a class="nav-link " href="/services">SERVICES</a>
-                  </li>
-                  <li class="nav-item active">
-                          <a class="nav-link " href="/posts">POSTS</a>
-                        </li>
                         <li class="nav-item active">
                             <a class="nav-link " href="/buy1">SERVICES</a>
                           </li>

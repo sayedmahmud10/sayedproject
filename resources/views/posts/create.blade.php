@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<body style="background:url('/storage/cover_images/2.jpg'); background-size: cover;">
 
 
 @section('content')
@@ -10,7 +11,12 @@
         {{ Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}} 
     </div>
     <div class="form-group">
-            {{ Form::label('body','Body')}}
+        {{ Form::label('location','Location')}}
+    {{ Form::text('location','',['class'=>'form-control','placeholder'=>'Location'])}} 
+</div>
+
+    <div class="form-group">
+            {{ Form::label('body','Description')}}
         {{ Form::textarea('body','',['class'=>'form-control','placeholder'=>'description'])}} 
     </div>
    
